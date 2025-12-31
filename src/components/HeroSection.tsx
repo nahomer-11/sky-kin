@@ -55,11 +55,20 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
           >
-            <Button variant="hero" size="xl" className="group">
-              Start a Project
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button
+              size="lg"
+              className="group relative h-14 px-8 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <span className="flex items-center gap-2 font-semibold">
+                Start a Project
+                <ArrowRight className="w-4 h-4" />
+              </span>
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button
+              variant="outline"
+              size="lg"
+              className="h-14 px-8 rounded-full border-border bg-background/50 backdrop-blur-md font-semibold"
+            >
               View Our Work
             </Button>
           </motion.div>
@@ -73,3 +82,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
